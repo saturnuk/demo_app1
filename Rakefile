@@ -4,4 +4,14 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
+module ::DemoApp1
+  class Application
+    include Rake::DSL
+  end
+end
+ 
+module ::RakeFileUtils
+  extend Rake::FileUtilsExt
+end
+
 DemoApp1::Application.load_tasks
